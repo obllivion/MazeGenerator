@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 
 using MazeGenerator.Util;
+using System.Windows.Forms;
 
 namespace MazeGenerator.Generators
 {
@@ -58,7 +59,7 @@ namespace MazeGenerator.Generators
         {
             if (current == null)
                 return;
-
+            Random rand = new Random();
             while (totalNumber > 0)
             {
                 current.Visited = 2;
@@ -66,7 +67,7 @@ namespace MazeGenerator.Generators
                 position.Y = current.Y;
 
                 // Randomize
-                Random rand = new Random();
+                
                 int east = rand.Next(0, 99);
                 int west = rand.Next(0, 99);
                 int north = rand.Next(0, 99);
@@ -136,11 +137,12 @@ namespace MazeGenerator.Generators
         {
             current.Visited = 2;
 
+            Random rand = new Random();
             while (totalNumber > 0)
             {
                 //current = stack.Pop();
 
-                Random rand = new Random();
+                
                 int east = rand.Next(0, 99999);
                 int west = rand.Next(0, 99999);
                 int north = rand.Next(0, 99999);
@@ -213,11 +215,11 @@ namespace MazeGenerator.Generators
             throw new NotImplementedException();
         }
 
-        public void DrawMaze(MainForm mForm)
+        public void DrawMaze(GroupBox canvas)
         {
             Pen myPen = new System.Drawing.Pen(Color.Red);
 
-            Graphics fGraphics = mForm.CreateGraphics();
+            Graphics fGraphics = canvas.CreateGraphics();
             fGraphics.Clear(Color.Gray);
 
             //fGraphics.DrawLine(myPen, 0, 0, 100, 100);

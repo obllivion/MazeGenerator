@@ -20,10 +20,10 @@ namespace MazeGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RecursiveBacktracker gen = new RecursiveBacktracker(100, 100);
+            RecursiveBacktracker gen = new RecursiveBacktracker(50, 20);
 
             gen.Generate();
-            gen.DrawMaze(this);
+            gen.DrawMaze(gbMaze);
 
         }
     }

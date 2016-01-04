@@ -34,6 +34,8 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chooseAlgorithmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recursiveBacktrackerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ellerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbMaze = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +78,8 @@
             // chooseAlgorithmToolStripMenuItem
             // 
             this.chooseAlgorithmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.recursiveBacktrackerToolStripMenuItem});
+            this.recursiveBacktrackerToolStripMenuItem,
+            this.ellerToolStripMenuItem});
             this.chooseAlgorithmToolStripMenuItem.Name = "chooseAlgorithmToolStripMenuItem";
             this.chooseAlgorithmToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.chooseAlgorithmToolStripMenuItem.Text = "Choose Algorithm";
@@ -89,11 +92,29 @@
             this.recursiveBacktrackerToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.recursiveBacktrackerToolStripMenuItem.Text = "Recursive Backtracker";
             // 
+            // ellerToolStripMenuItem
+            // 
+            this.ellerToolStripMenuItem.Name = "ellerToolStripMenuItem";
+            this.ellerToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.ellerToolStripMenuItem.Text = "Eller";
+            // 
+            // gbMaze
+            // 
+            this.gbMaze.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbMaze.Location = new System.Drawing.Point(13, 28);
+            this.gbMaze.Name = "gbMaze";
+            this.gbMaze.Size = new System.Drawing.Size(604, 398);
+            this.gbMaze.TabIndex = 2;
+            this.gbMaze.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 467);
+            this.Controls.Add(this.gbMaze);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -114,6 +135,8 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chooseAlgorithmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recursiveBacktrackerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ellerToolStripMenuItem;
+        private System.Windows.Forms.GroupBox gbMaze;
     }
 }
 
