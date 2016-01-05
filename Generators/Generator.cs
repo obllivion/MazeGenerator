@@ -12,13 +12,13 @@ namespace MazeGenerator.Generators
 {
     abstract class Generator
     {
-        protected MazeCell[][] maze;
+        public MazeCell[][] maze;
 
         protected int width, height;
 
-        protected Point startPosition;
+        public Point startPosition;
 
-        protected Point finalDestination;
+        public Point finalDestination;
 
         public abstract void Generate();
 
@@ -58,8 +58,9 @@ namespace MazeGenerator.Generators
             }
 
             //drawing startin and ending point
-            fGraphics.FillRectangle(mBrush, startPosition.X * size, startPosition.Y * size, size, size);
-            fGraphics.FillRectangle(mBrush, finalDestination.X * size, finalDestination.Y * size, size, size);
+            fGraphics.FillRectangle(mBrush, startPosition.X * size + size / 2, startPosition.Y * size + size / 2, size / 2, size / 2);
+            mBrush.Color = Color.SteelBlue;
+            fGraphics.FillRectangle(mBrush, finalDestination.X * size + size / 2, finalDestination.Y * size + size / 2, size / 2, size / 2);
 
             myPen.Dispose();
             fGraphics.Dispose();

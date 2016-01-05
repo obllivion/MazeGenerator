@@ -40,6 +40,8 @@
             this.nupWidth = new System.Windows.Forms.NumericUpDown();
             this.nupHeight = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.bSolve = new System.Windows.Forms.Button();
+            this.bStop = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupHeight)).BeginInit();
@@ -135,7 +137,7 @@
             this.nupWidth.Size = new System.Drawing.Size(120, 20);
             this.nupWidth.TabIndex = 5;
             this.nupWidth.Value = new decimal(new int[] {
-            50,
+            5,
             0,
             0,
             0});
@@ -148,7 +150,7 @@
             this.nupHeight.Size = new System.Drawing.Size(120, 20);
             this.nupHeight.TabIndex = 7;
             this.nupHeight.Value = new decimal(new int[] {
-            50,
+            5,
             0,
             0,
             0});
@@ -163,11 +165,35 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Height:";
             // 
+            // bSolve
+            // 
+            this.bSolve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bSolve.Location = new System.Drawing.Point(447, 432);
+            this.bSolve.Name = "bSolve";
+            this.bSolve.Size = new System.Drawing.Size(75, 23);
+            this.bSolve.TabIndex = 8;
+            this.bSolve.Text = "Solve";
+            this.bSolve.UseVisualStyleBackColor = true;
+            this.bSolve.Click += new System.EventHandler(this.bSolve_Click);
+            // 
+            // bStop
+            // 
+            this.bStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bStop.Location = new System.Drawing.Point(529, 433);
+            this.bStop.Name = "bStop";
+            this.bStop.Size = new System.Drawing.Size(75, 23);
+            this.bStop.TabIndex = 9;
+            this.bStop.Text = "Stop";
+            this.bStop.UseVisualStyleBackColor = true;
+            this.bStop.Click += new System.EventHandler(this.bStop_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 467);
+            this.Controls.Add(this.bStop);
+            this.Controls.Add(this.bSolve);
             this.Controls.Add(this.nupHeight);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nupWidth);
@@ -201,6 +227,8 @@
         private System.Windows.Forms.NumericUpDown nupWidth;
         private System.Windows.Forms.NumericUpDown nupHeight;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button bSolve;
+        private System.Windows.Forms.Button bStop;
     }
 }
 
