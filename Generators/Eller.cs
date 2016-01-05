@@ -140,37 +140,5 @@ namespace MazeGenerator.Generators
             throw new NotImplementedException();
         }
 
-        public void DrawMaze(GroupBox canvas)
-        {
-            Pen myPen = new System.Drawing.Pen(Color.Red);
-
-            Graphics fGraphics = canvas.CreateGraphics();
-            fGraphics.Clear(Color.Gray);
-
-            //fGraphics.DrawLine(myPen, 0, 0, 100, 100);
-            int size = 20;
-            for (int i = 0; i < width; i++)
-            {
-                for (int j = 0; j < height; j++)
-                {
-                    MazeCellEller currCell = maze[i][j] as MazeCellEller;
-
-                    if (currCell.North == null)
-                        fGraphics.DrawLine(myPen, i * size, j * size, (i + 1) * size, j * size);
-
-                    if (currCell.South == null)
-                        fGraphics.DrawLine(myPen, i * size, (j + 1) * size, (i + 1) * size, (j + 1) * size);
-
-                    if (currCell.East == null)
-                        fGraphics.DrawLine(myPen, (i + 1) * size, j * size, (i + 1) * size, (j + 1) * size);
-
-                    if (currCell.West == null)
-                        fGraphics.DrawLine(myPen, i * size, j * size, i * size, (j + 1) * size);
-                }
-            }
-
-            myPen.Dispose();
-            fGraphics.Dispose();
-        }
     }
 }
